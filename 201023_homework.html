@@ -95,9 +95,9 @@
             const extractedNumber = foundNumber(inputNumber);
             
             if (!extractedNumber) {
-                alert("숫자 혹은 'n단'을 입력하세요");
+                document.querySelector('#showResult').innerHTML = "숫자 혹은 'n단'을 입력하세요";
             } else if (extractedNumber < 2 || extractedNumber > 9) {
-                alert('2에서 9까지의 숫자만 알려줄수 있어요... 미안해요..');
+                document.querySelector('#showResult').innerHTML = "2에서 9까지의 숫자만 알려줄수 있어요... 미안해요..";
             } else {
                 for (let i = 1; i <= 9; i++) {
                     document.querySelector('#showResult').innerHTML += extractedNumber + " X " + i + " = " + extractedNumber * i + '<br>';
